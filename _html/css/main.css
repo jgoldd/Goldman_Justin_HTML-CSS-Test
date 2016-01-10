@@ -17,10 +17,26 @@ Dark: #323e48
 */
 
 body {
+    height: 100%;
 }
 
 .container {
     padding: 0px 100px;
+    margin: 0 auto;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
 }
 
 a:link {
@@ -38,13 +54,25 @@ a:active {
     color: #f1f3f6;
 }
 
-
-h1{
+h1 {
     font-size: 28px;
     color: #febe10;
     font-family: 'Lora', serif;
-    
 }
+
+h2 {
+    font-size: 18px;
+    color: #323e48;
+    font-family: 'Lora', serif;
+}
+
+h3 {
+    font-size: 14px;
+    color: #00b7f1;
+    font-family: 'Source Sans Pro', serif;
+    text-transform: uppercase;
+}
+
 header nav ul li:nth-child(3) a {
     color: #323e48;
 }
@@ -87,27 +115,81 @@ header nav a {
     text-align: center;
 }
 
+
 /** SERVICES SECTION **/
 
-section:first-of-type{
-    padding: 50px 0 20px 0;
-
+section:first-of-type {
+    padding: 50px 0 50px 0;
 }
 
-section:first-of-type article p{
-    line-height: 24px;
-    font-family: 'Source Sans Pro', serif;
-    font-weight: 400;  
-}
-
-section:first-of-type article{
-    overflow: hidden;
-    padding: 20px 0px;
-
-    
-}
-
-section:first-of-type img{
+section:first-of-type img {
     float: left;
     margin-right: 50px;
+}
+
+section:first-of-type article {
+    overflow: hidden;
+    padding: 20px 0px;
+}
+
+section:first-of-type article p {
+    line-height: 24px;
+    font-family: 'Source Sans Pro', serif;
+    font-weight: 400;
+}
+
+
+/** WHY YOU SHOULD HIRE US SECTION **/
+
+section:nth-child(3) {
+    padding: 50px 0 20px 0;
+    background-color: #f1f3f6;
+    overflow: auto;
+    border-top: 1px solid #D0D5DB;
+}
+
+section:nth-child(3) article {
+    width: calc(100% / 2 - 20px);
+    padding: 25px 0;
+    float: left;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'Source Sans Pro', serif;
+    font-weight: 400;
+}
+
+section:nth-child(3) article:nth-of-type(2n + 1) {
+    margin-right: 40px;
+}
+
+
+/** CLEAR FIX FOR 3rd ARTICLE **/
+section:nth-child(3) article:nth-of-type(3n + 3){
+    clear: both;
+}
+/**  END **/
+
+.learn{
+ margin: 0 auto;   
+}
+}
+.learn-more {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: 'Source Sans Pro', serif;
+  color: #ffffff;
+  font-size: 18px;
+  background: #febe10;
+  text-transform: uppercase;
+  padding: 10px 25px 10px 25px;
+  text-decoration: none;
+  margin: 0 auto;
+    text-align: center;
+}
+
+.learn-more:hover {
+  background: #d4631c;
+  text-decoration: none;
 }
